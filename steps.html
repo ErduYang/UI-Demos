@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>step</title>
+    <style type="text/css">
+        ol.steps::-webkit-scrollbar { /* chrome 隐藏滚动条*/
+            display: none;
+        }
+        ol.steps{
+            list-style: none;
+            display: flex;
+            overflow-x: auto;
+            height: 64px;
+        }
+        ol.steps:after,ol.steps li:after{
+            content: '';
+            display: block;
+            clear: both;
+        }
+        ol.steps li{
+            float: left;
+            flex: 1;
+            position: relative;
+            min-width: 120px;
+        }
+        ol.steps li .step-line{
+            height: 5px;
+            background-color: #e0e0e0;
+            box-shadow: inset 0 1px 1px rgba(0,0,0,.2);
+            margin-top: 15px;
+        }
+        ol.steps li.step-active .step-line{
+            background-color: #00a854;
+            box-shadow: inset 0 1px 1px #00a854;
+        }
+        ol.steps .step-content{
+            position: absolute;
+            top:0;
+            left:-15px ;
+            text-align: center;
+        }
+        ol.steps li .step-content .step-num{
+            display: inline-block;
+            height: 30px;
+            width: 30px;
+            color: #fff;
+            background-color: #b9b9b9;
+            line-height: 30px;
+            border-radius: 50%;
+            text-align: center;
+            border:2px solid rgba(224,224,224,1);
+        }
+        ol.steps li.step-active .step-content .step-num{
+            background-color: #00a854;
+        }
+        ol.steps li.step-end{
+            width: 120px!important;
+            flex: inherit;
+        }
+        ol.steps li.step-end .step-line{
+            display: none;
+        }
+
+    </style>
+</head>
+<body>
+<div>
+    <ol class="steps">
+        <li class="step-active">
+            <div class="step-line"></div>
+            <div class="step-content">
+                <span class="step-num">1</span>
+                <div>填写资料</div>
+            </div>
+
+        </li>
+        <li class="step-active">
+            <div class="step-line"></div>
+            <div class="step-content">
+                <span class="step-num">2</span>
+                <div>审核填写信息</div>
+            </div>
+        </li>
+        <li class="step-active">
+            <div class="step-line"></div>
+            <div class="step-content">
+                <span class="step-num">3</span>
+                <div class="step-text">完成注册</div>
+            </div>
+        </li>
+        <li class="step-active">
+            <div class="step-line"></div>
+            <div class="step-content">
+                <span class="step-num">4</span>
+                <div class="step-text">完成注册</div>
+            </div>
+        </li>
+        <li class="step-active">
+            <div class="step-line"></div>
+            <div class="step-content">
+                <span class="step-num">5</span>
+                <div class="step-text">完成注册</div>
+            </div>
+        </li>
+        <li>
+            <div class="step-line"></div>
+            <div class="step-content">
+                <span class="step-num">6</span>
+                <div class="step-text">完成注册</div>
+            </div>
+        </li>
+        <li>
+            <div class="step-line"></div>
+            <div class="step-content">
+                <span class="step-num">7</span>
+                <div class="step-text">完成注册</div>
+            </div>
+        </li>
+        <li>
+            <div class="step-line"></div>
+            <div class="step-content">
+                <span class="step-num">8</span>
+                <div class="step-text">完成注册</div>
+            </div>
+        </li>
+        <li>
+            <div class="step-line"></div>
+            <div class="step-content">
+                <span class="step-num">9</span>
+                <div class="step-text">完成注册</div>
+            </div>
+        </li>
+        <li class="step-end">
+            <div class="step-line"></div>
+            <div class="step-content">
+                <span class="step-num">10</span>
+                <div class="step-text">完成注册</div>
+            </div>
+        </li>
+    </ol>
+</div>
+
+</body>
+</html>
